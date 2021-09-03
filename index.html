@@ -4,78 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/style.css">
     <title>Document</title>
 </head>
 
 
 <body>
     <header>
-
         <nav>
             <div>
-                Welcome to I DMB
-            </div>
+                <h1 class="left">Welcome to I DMB</h1>
 
-            <div id="quote">
-                "Quotes"
+                <ul id="quote" class="right">
+                    <li>"Quotes"</li>
+                </ul>
             </div>
         </nav>
     </header>
-
     <main>
-        <div id="wrapper">
-            <div id="to-watch">
-                <h2>Movies to watch</h2>
+        <div class="row">
+            <div>
+                <div id="to-watch" class="col s3">
+                    <h2>Movies to watch</h2>
+                </div>
+
+                <div id="watched" class="col s3">
+                    <h2>Movies watched</h2>
+                </div>
             </div>
 
-            <div id="watched">
-                <h2>Movies watched</h2>
-            </div>
-        </div>
+            <div id="search-box" class="col s6">
+                <div> 
+                    <h2>Search for movie:</h2>
+                    <form> 
 
-        <div id="search-box">
-            <div> 
-                <h2>Search for movie:</h2>
-                <form> 
+                        <label for="keyword">Keyword:</label>
+                        <input type="text" id="keyword" name="'keyword">
 
-                    <label for="keyword">Keyword:</label>
-                    <input type="text" id="keyword" name="'keyword">
+                        <label for="rating">Rating:</label>
+                        <select id="rating">
+                                <option>G</option>
+                                <option>PG</option>
+                                <option>PG-13</option>
+                                <option>R</option>
+                            </select>
+                        
+                        
+                        <label for="genre">Genre:</label>
+                            <select id= "genre">
+                                <option>Comedy</option>
+                                <option>Sci-Fi</option>
+                                <option>Horror</option>
+                                <option>Romance</option>
+                                <option>Action</option>
+                                <option>Thriller</option>
+                                <option>Drama</option>
+                                <option>Mystery</option>
+                                <option>Crime</option>
+                                <option>Animation</option>
+                                <option>Adventure</option>
+                                <option>Fantasy</option>
+                                <option>Documentary</option>
+                                <option>History</option>
+                                <option>Musical</option>
+                                <option>War</option>
+                                <option>Western</option>
+                                <option>Superhero</option>
+                            </select>
 
-                    <label for="rating">Rating:</label>
-                       <select id="rating">
-                            <option>G</option>
-                            <option>PG</option>
-                            <option>PG-13</option>
-                            <option>R</option>
-                        </select>
-                    
-                    
-                    <label for="genre">Genre:</label>
-                        <select id= "genre">
-                            <option>Comedy</option>
-                            <option>Sci-Fi</option>
-                            <option>Horror</option>
-                            <option>Romance</option>
-                            <option>Action</option>
-                            <option>Thriller</option>
-                            <option>Drama</option>
-                            <option>Mystery</option>
-                            <option>Crime</option>
-                            <option>Animation</option>
-                            <option>Adventure</option>
-                            <option>Fantasy</option>
-                            <option>Documentary</option>
-                            <option>History</option>
-                            <option>Musical</option>
-                            <option>War</option>
-                            <option>Western</option>
-                            <option>Superhero</option>
-                        </select>
-
-                    <label>Year:</label>
-                </form>
+                        <label>Year:</label>
+                    </form>
+                </div>
             </div>
         </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
