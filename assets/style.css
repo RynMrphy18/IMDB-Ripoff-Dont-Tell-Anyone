@@ -1,7 +1,6 @@
-h1 {
-    margin: 2px;
-    font-size: 3.8rem;
+.navbar {
+    margin-bottom: 30px;
 }
-nav ul li {
+h1 {
     font-size: 30px;
 }
