@@ -4,81 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="assets/style.css">
     <title>Document</title>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 
 <body>
     <header>
-        <nav>
-            <div>
-                <h1 class="left">Welcome to I DMB</h1>
-
-                <ul id="quote" class="right">
-                    <li>"Quotes"</li>
-                </ul>
+        <nav class="navbar is-primary">
+            <div class="navbar-brand">
+                <h1 class="navbar-item">Welcome to I DMB</h1>
+            </div>
+            <div class="navbar-end">
+                <p class="navbar-item">"Quotes go here"</p>
             </div>
         </nav>
     </header>
     <main>
-        <div class="row">
-            <div>
-                <div id="to-watch" class="col s3">
-                    <h2>Movies to watch</h2>
+        <div class="columns">
+            <div class="column columns is-mobile">
+                <div id="to-watch" class="column panel is-primary">
+                    <div class="panel-heading">
+                        <h2>Movies to watch</h2>
+                    </div>
                 </div>
 
-                <div id="watched" class="col s3">
-                    <h2>Movies watched</h2>
+                <div id="watched" class="column panel is-primary">
+                    <div class="panel-heading">
+                        <h2>Movies watched</h2>
+                    </div>
                 </div>
             </div>
 
-            <div id="search-box" class="col s6">
-                <div> 
-                    <h2>Search for movie:</h2>
-                    <form> 
-
-                        <label for="keyword">Keyword:</label>
-                        <input type="text" id="keyword" name="'keyword">
-
-                        <label for="rating">Rating:</label>
-                        <select id="rating">
-                                <option>G</option>
-                                <option>PG</option>
-                                <option>PG-13</option>
-                                <option>R</option>
-                            </select>
-                        
-                        
-                        <label for="genre">Genre:</label>
-                            <select id= "genre">
-                                <option>Comedy</option>
-                                <option>Sci-Fi</option>
-                                <option>Horror</option>
-                                <option>Romance</option>
-                                <option>Action</option>
-                                <option>Thriller</option>
-                                <option>Drama</option>
-                                <option>Mystery</option>
-                                <option>Crime</option>
-                                <option>Animation</option>
-                                <option>Adventure</option>
-                                <option>Fantasy</option>
-                                <option>Documentary</option>
-                                <option>History</option>
-                                <option>Musical</option>
-                                <option>War</option>
-                                <option>Western</option>
-                                <option>Superhero</option>
-                            </select>
-
-                        <label>Year:</label>
+            <div id="search-box" class="column">
+                <div class="panel is-primary"> 
+                    <h2 class="panel-heading">Search for movies:</h2>
+                    <form>
+                        <div class="field is-grouped is-grouped-centered">
+                            <div class="field is-horizontal">
+                                <label for="keyword" class="label">Keyword</label>
+                                <div class="control is-expanded">
+                                    <input type="text" id="keyword" name="'keyword" class="input">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="rating" class="label">Rating:</label>
+                                <div class="control">
+                                <select id="rating" class="select">
+                                    <option>G</option>
+                                    <option>PG</option>
+                                    <option>PG-13</option>
+                                    <option>R</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="field">
+                            <label for="genre" class="label">Genre:</label>
+                                <select id= "genre" class="select">
+                                    <option>Comedy</option>
+                                    <option>Sci-Fi</option>
+                                    <option>Horror</option>
+                                    <option>Romance</option>
+                                    <option>Action</option>
+                                    <option>Thriller</option>
+                                    <option>Drama</option>
+                                    <option>Mystery</option>
+                                    <option>Crime</option>
+                                    <option>Animation</option>
+                                    <option>Adventure</option>
+                                    <option>Fantasy</option>
+                                    <option>Documentary</option>
+                                    <option>History</option>
+                                    <option>Musical</option>
+                                    <option>War</option>
+                                    <option>Western</option>
+                                    <option>Superhero</option>
+                                </select>
+                            </div>
+                        <button class="button is-link">Search</button>
                     </form>
                 </div>
             </div>
