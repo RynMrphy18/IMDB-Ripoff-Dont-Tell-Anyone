@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/style.css">
     <title>Document</title>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,70 +17,66 @@
 
 <body>
     <header>
-
-        <nav>
-            <div>
-                Welcome to I DMB
+        <nav class="navbar is-primary">
+            <div class="navbar-brand">
+                <h1 class="navbar-item">Welcome to I DMB</h1>
             </div>
-
-            <div id="quote">
-                "Quotes"
+            <div class="navbar-end">
+                <p class="navbar-item">"Quotes go here"</p>
             </div>
         </nav>
     </header>
-
     <main>
-        <div id="wrapper">
-            <div id="to-watch">
-                <h2>Movies to watch</h2>
+        <div class="columns">
+            <div class="column columns is-mobile">
+                <div id="to-watch" class="column">
+                    <h2>Movies to watch</h2>
+                </div>
+
+                <div id="watched" class="column">
+                    <h2>Movies watched</h2>
+                </div>
             </div>
 
-            <div id="watched">
-                <h2>Movies watched</h2>
-            </div>
-        </div>
-
-        <div id="search-box">
-            <div> 
-                <h2>Search for movie:</h2>
-                <form> 
-
-                    <label for="keyword">Keyword:</label>
-                    <input type="text" id="keyword" name="'keyword">
-
-                    <label for="rating">Rating:</label>
-                       <select id="rating">
-                            <option>G</option>
-                            <option>PG</option>
-                            <option>PG-13</option>
-                            <option>R</option>
-                        </select>
-                    
-                    
-                    <label for="genre">Genre:</label>
-                        <select id= "genre">
-                            <option>Comedy</option>
-                            <option>Sci-Fi</option>
-                            <option>Horror</option>
-                            <option>Romance</option>
-                            <option>Action</option>
-                            <option>Thriller</option>
-                            <option>Drama</option>
-                            <option>Mystery</option>
-                            <option>Crime</option>
-                            <option>Animation</option>
-                            <option>Adventure</option>
-                            <option>Fantasy</option>
-                            <option>Documentary</option>
-                            <option>History</option>
-                            <option>Musical</option>
-                            <option>War</option>
-                            <option>Western</option>
-                            <option>Superhero</option>
-                        </select>
-
-                    <label>Year:</label>
-                </form>
+            <div id="search-box" class="column">
+                <div class="panel is-primary"> 
+                    <h2 class="panel-heading">Search for movies:</h2>
+                    <form>
+                        <div class="panel-block">
+                            <label for="keyword">Keyword:</label>
+                            <input type="text" id="keyword" name="'keyword">
+                            <label for="rating">Rating:</label>
+                            <select id="rating">
+                                    <option>G</option>
+                                    <option>PG</option>
+                                    <option>PG-13</option>
+                                    <option>R</option>
+                            </select>
+                            <label for="genre">Genre:</label>
+                                <select id= "genre">
+                                    <option>Comedy</option>
+                                    <option>Sci-Fi</option>
+                                    <option>Horror</option>
+                                    <option>Romance</option>
+                                    <option>Action</option>
+                                    <option>Thriller</option>
+                                    <option>Drama</option>
+                                    <option>Mystery</option>
+                                    <option>Crime</option>
+                                    <option>Animation</option>
+                                    <option>Adventure</option>
+                                    <option>Fantasy</option>
+                                    <option>Documentary</option>
+                                    <option>History</option>
+                                    <option>Musical</option>
+                                    <option>War</option>
+                                    <option>Western</option>
+                                    <option>Superhero</option>
+                                </select>
+                            </div>
+                        <button class="panel-block">Search</button>
+                    </form>
+                </div>
             </div>
         </div>
     </main>
