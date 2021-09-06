@@ -4,3 +4,14 @@
 h1 {
     font-size: 30px;
 }
+
+#trash {
+  position:fixed;
+  text-align: center;
+  bottom: 0;  
+  left: 0;
+  right: 0;
+  background: red;
+  color: white;
+  font-size: 40px;
+}
