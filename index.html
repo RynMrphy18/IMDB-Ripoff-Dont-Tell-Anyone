@@ -29,12 +29,16 @@
     <main>
         <div class="columns">
             <div class="column columns is-mobile">
-                <div id="to-watch" class="column">
-                    <h2>Movies to watch</h2>
+                <div id="to-watch" class="column panel is-primary">
+                    <div class="panel-heading">
+                        <h2>Movies to watch</h2>
+                    </div>
                 </div>
 
-                <div id="watched" class="column">
-                    <h2>Movies watched</h2>
+                <div id="watched" class="column panel is-primary">
+                    <div class="panel-heading">
+                        <h2>Movies watched</h2>
+                    </div>
                 </div>
             </div>
 
@@ -42,18 +46,27 @@
                 <div class="panel is-primary"> 
                     <h2 class="panel-heading">Search for movies:</h2>
                     <form>
-                        <div class="panel-block">
-                            <label for="keyword">Keyword:</label>
-                            <input type="text" id="keyword" name="'keyword">
-                            <label for="rating">Rating:</label>
-                            <select id="rating">
+                        <div class="field is-grouped is-grouped-centered">
+                            <div class="field is-horizontal">
+                                <label for="keyword" class="label">Keyword</label>
+                                <div class="control is-expanded">
+                                    <input type="text" id="keyword" name="'keyword" class="input">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="rating" class="label">Rating:</label>
+                                <div class="control">
+                                <select id="rating" class="select">
                                     <option>G</option>
                                     <option>PG</option>
                                     <option>PG-13</option>
                                     <option>R</option>
-                            </select>
-                            <label for="genre">Genre:</label>
-                                <select id= "genre">
+                                </select>
+                                </div>
+                            </div>
+                            <div class="field">
+                            <label for="genre" class="label">Genre:</label>
+                                <select id= "genre" class="select">
                                     <option>Comedy</option>
                                     <option>Sci-Fi</option>
                                     <option>Horror</option>
@@ -74,7 +87,7 @@
                                     <option>Superhero</option>
                                 </select>
                             </div>
-                        <button class="panel-block">Search</button>
+                        <button class="button is-link">Search</button>
                     </form>
                 </div>
             </div>
