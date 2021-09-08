@@ -15,3 +15,21 @@ h1 {
   color: white;
   font-size: 40px;
 }
+.poster {
+  width: 90px;
+  height: auto;
+}
+.vertical-center {
+  padding: 50px 0;
+}
+.marg-side-10 {
+  margin: 0 10px 0 10px;
+}
+.search-column {
+  margin: 0 10px 0 40px;
+}
+.searched-movies div {
+  margin-left: 20px;
+  width: auto;
+  margin-right: 20px;
+}

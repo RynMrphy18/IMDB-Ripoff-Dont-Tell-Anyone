@@ -22,10 +22,7 @@ var fetchSuggestedMovie = function(movie){
   });
 };
 
-var displayMovie = function(movie, keywordSearch){
-  movieFieldEl.textContent="";
-  keywordFormEl.textContent=movieSearch;
-}
+
 
 fetchSuggestedMovie("inception");
 

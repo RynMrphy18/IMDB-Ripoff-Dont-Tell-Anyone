@@ -24,159 +24,117 @@
     </header>
     <main>
         <div class="columns">
-            <div class="column columns is-mobile">
-                <div id="to-watch" class="column panel is-primary">
+            <div class="movie-lists column is-half columns">
+                <div id="to-watch" class="marg-side-10 column is-half panel is-primary">
                     <div class="panel-heading">
                         <h2>Movies to watch</h2>
                     </div>
+                    <div class="movie-card card column is-full">
+                        <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                            <figure class="image poster">
+                                <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_Ratio0.7273_AL_.jpg" alt="Placeholder image">
+                            </figure>
+                            </div>
+                            <div class="vertical-center media-content has-text-centered">
+                                <p class="title is-10 has-text-weight-bold">Inception</p>
+                                <p class="subtitle is-6">(2010)</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="movie-card card column is-full">
+                        <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                            <figure class="image poster">
+                                <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_Ratio0.7273_AL_.jpg" alt="Placeholder image">
+                            </figure>
+                            </div>
+                            <div class="vertical-center media-content has-text-centered">
+                                <p class="title is-10 has-text-weight-bold">Inception</p>
+                                <p class="subtitle is-6">(2010)</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="watched" class="column panel is-primary">
+                <div id="watched" class="marg-side-10 column is-half panel is-primary">
                     <div class="panel-heading">
                         <h2>Movies watched</h2>
                     </div>
+                    <div class="movie-card card column is-full">
+                        <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                            <figure class="image poster">
+                                <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_Ratio0.7273_AL_.jpg" alt="Placeholder image">
+                            </figure>
+                            </div>
+                            <div class="vertical-center media-content has-text-centered">
+                                <p class="title is-10 has-text-weight-bold">Inception</p>
+                                <p class="subtitle is-6">(2010)</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div id="search-box" class="column">
+            <div class="search-column column">
                 <div class="panel is-primary">
-
-                    <h2 class="panel-heading">Search for movies:</h2>
-                    <form id="movie-search">
-                        <div class="field is-grouped is-grouped-centered">
-                            <div class="field is-horizontal">
-                                <label for="keyword" class="label">Keyword</label>
-                                <div class="control is-expanded">
-                                    <input type="text" id="keyword-search-form" name="'keyword" class="input">
+                        <h2 class="panel-heading">Search for movies:</h2>
+                        <form id="movie-search">
+                            <div class="field is-grouped is-grouped-centered">
+                                <div class="field is-horizontal">
+                                    <label for="keyword" class="label">Keyword</label>
+                                    <div class="control is-expanded">
+                                        <input type="text" id="keyword-search-form" name="'keyword" class="input">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="field">
-                                <label for="rating" class="label">Rating:</label>
-                                <div class="control">
-                                <select id="rating" class="select">
-                                    <option>G</option>
-                                    <option>PG</option>
-                                    <option>PG-13</option>
-                                    <option>R</option>
-                                </select>
-                                </div>
-                            </div>
-                            <div class="field">
-                            <label for="genre" class="label">Genre:</label>
-                                <select id= "genre" class="select">
-                                    <option>Comedy</option>
-                                    <option>Sci-Fi</option>
-                                    <option>Horror</option>
-                                    <option>Romance</option>
-                                    <option>Action</option>
-                                    <option>Thriller</option>
-                                    <option>Drama</option>
-                                    <option>Mystery</option>
-                                    <option>Crime</option>
-                                    <option>Animation</option>
-                                    <option>Adventure</option>
-                                    <option>Fantasy</option>
-                                    <option>Documentary</option>
-                                    <option>History</option>
-                                    <option>Musical</option>
-                                    <option>War</option>
-                                    <option>Western</option>
-                                    <option>Superhero</option>
-                                </select>
-                            </div>
+                            <button class="button is-link" id="keyword-search">Search</button>
                             
-                        <button class="button is-link" id="keyword-search">Search</button>
-                        
-                    </form>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-left">
-                      <figure class="image is-48x48">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_Ratio0.7273_AL_.jpg" alt="Placeholder image">
-                      </figure>
+                        </form>
                     </div>
-                    <div class="media-content">
-                      <p class="title is-4">Inception</p>
-                      <p class="subtitle is-6">(2010)</p>
+                    <div class="columns is-multiline searched-movies">
+                        <div class="movie-card card column is-full">
+                            <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                <figure class="image poster">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_Ratio0.7273_AL_.jpg" alt="Placeholder image">
+                                </figure>
+                                </div>
+                                <div class="vertical-center media-content has-text-centered">
+                                    <p class="title is-10 has-text-weight-bold">Inception</p>
+                                    <p class="subtitle is-6">(2010)</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="movie-card card column is-full">
+                            <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                <figure class="image poster">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_Ratio0.7273_AL_.jpg" alt="Placeholder image">
+                                </figure>
+                                </div>
+                                <div class="vertical-center media-content has-text-centered">
+                                    <p class="title is-10 has-text-weight-bold">Inception</p>
+                                    <p class="subtitle is-6">(2010)</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-                <!-- <div class="field is-horizontal">
-                    <div class="field-body" id="movie-field">
-            
-                        <div class="field">
-                            <label class="label"></label>
-                            <div class="control has-icons-left">
-                                <input class="input is-primary" type="text">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label"></label>
-                            <div class="control has-icons-left">
-                                <input class="input is-primary" type="text">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label"></label>
-                            <div class="control has-icons-left">
-                                <input class="input is-primary" type="text">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label"></label>
-                            <div class="control has-icons-left">
-                                <input class="input is-primary" type="text">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label"></label>
-                            <div class="control has-icons-left">
-                                <input class="input is-primary" type="text">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label"></label>
-                            <div class="control has-icons-left">
-                                <input class="input is-primary" type="text">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label"></label>
-                            <div class="control has-icons-left">
-                                <input class="input is-primary" type="text">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label"></label>
-                            <div class="control has-icons-left">
-                                <input class="input is-primary" type="text">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label"></label>
-                            <div class="control has-icons-left">
-                                <input class="input is-primary" type="text">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label"></label>
-                            <div class="control has-icons-left">
-                                <input class="input is-primary" type="text">
-                            </div>
-                        </div> -->
-                        
-                    <!-- </div>
-                </div> -->
 
-            <div id="trash" class="column is-centered">
-                Drag movie here to delete
             </div>
+        <div id="trash" class="column is-centered">
+            Drag movie here to delete
         </div>
+    </div>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
