@@ -5,13 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="assets/style.css">
-    <title>Document</title>
-    <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="assets/style.css">
+    <title>IDMB</title>
 </head>
 
 
@@ -46,7 +42,7 @@
                 <div class="panel is-primary">
 
                     <h2 class="panel-heading">Search for movies:</h2>
-                    <form>
+                    <form id="movie-search">
                         <div class="field is-grouped is-grouped-centered">
                             <div class="field is-horizontal">
                                 <label for="keyword" class="label">Keyword</label>
@@ -95,8 +91,22 @@
                 </div>
             </div>
 
-            <div class="panel-block">
-                <div class="field is-horizontal">
+            <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image is-48x48">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_Ratio0.7273_AL_.jpg" alt="Placeholder image">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">Inception</p>
+                      <p class="subtitle is-6">(2010)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <!-- <div class="field is-horizontal">
                     <div class="field-body" id="movie-field">
             
                         <div class="field">
@@ -149,8 +159,8 @@
                         </div>
                         <div class="field">
                             <label class="label"></label>
-                            <div class="control">
-                                <input class="input is-info" type="text">
+                            <div class="control has-icons-left">
+                                <input class="input is-primary" type="text">
                             </div>
                         </div>
                         <div class="field">
@@ -158,10 +168,10 @@
                             <div class="control has-icons-left">
                                 <input class="input is-primary" type="text">
                             </div>
-                        </div>
+                        </div> -->
                         
-                    </div>
-                </div>
+                    <!-- </div>
+                </div> -->
 
             <div id="trash" class="column is-centered">
                 Drag movie here to delete
@@ -169,6 +179,8 @@
         </div>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/script.js"></script>
 </body>
 </html>

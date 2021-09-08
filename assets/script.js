@@ -1,7 +1,3 @@
-
-// A user is able to choose/input criteria for their movie recommendation 
-// When a user searches for a movie they are presented with a selection based off their criteria
-
 var apiKey = "k_09b1k3at";
 var keywordFormEl=document.querySelector("#keyword-search-form");
 var keywordInputEl=document.querySelector("#movie");
@@ -9,17 +5,19 @@ var ratingControlEl=document.querySelector("#rating");
 var genreSelectionEl=document.querySelector("#genre");
 var searchButtonEl=document.querySelector("#keyword-search");
 var movieFieldEl=document.querySelector("#movie-field");
+var movieSearchForm = document.querySelector("#movie-search")
 
 // fetch request from imdb api
 
 var fetchSuggestedMovie = function(movie){
   var apiKey = "k_09b1k3at"
-  var apiURL = `https://imdb-api.com/en/API/' + movie + apiKey
+  var apiURL = 'https://imdb-api.com/en/API/SearchMovie/' + apiKey + "/" + movie
 
   fetch(apiURL)
-  .then(function(response){
-    response.json().then(function(data){
-      displayMovie(data, movie);
+  .then(function(response) {
+    response.json().then(function(data) {
+      // displayMovie(data, movie);
+      console.log(data, movie);
     });
   });
 };
@@ -29,7 +27,7 @@ var displayMovie = function(movie, keywordSearch){
   keywordFormEl.textContent=movieSearch;
 }
 
-fetchSuggestedMovie();
+fetchSuggestedMovie("inception");
 
 var savedMovies = {};
 
