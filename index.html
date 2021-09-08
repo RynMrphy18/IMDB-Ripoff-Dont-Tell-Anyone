@@ -82,23 +82,39 @@
                     </div>
                 </div>
             </div>
-            <div class="search-column column">
-                <div class="panel is-primary">
-                        <h2 class="panel-heading">Search for movies:</h2>
-                        <form id="movie-search">
-                            <div class="field is-grouped is-grouped-centered">
-                                <div class="field is-horizontal">
-                                    <label for="keyword" class="label">Keyword</label>
-                                    <div class="control is-expanded">
+            <div class="search-column column panel is-primary">
+                <div>
+                    <div class="panel-heading">
+                            <form id="movie-search" class="field is-horizontal">
+                                <div class="field-label">
+                                    <label class="label">Search for movies:</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
                                         <input type="text" id="keyword-search-form" name="'keyword" class="input">
                                     </div>
+                                    <button class="button is-info" id="keyword-search">Search</button>
                                 </div>
-                            <button class="button is-link" id="keyword-search">Search</button>
-                            
-                        </form>
+                            </form>
                     </div>
-                    <div class="columns is-multiline searched-movies">
-                        <div class="movie-card card column is-full">
+                </div>
+                <div class="columns is-multiline searched-movies">
+                    <div class="movie-card card column is-full">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                <figure class="image poster">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_Ratio0.7273_AL_.jpg" alt="Placeholder image">
+                                </figure>
+                                </div>
+                                <div class="vertical-center media-content has-text-centered">
+                                    <p class="title is-10 has-text-weight-bold">Inception</p>
+                                    <p class="subtitle is-6">(2010)</p>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="movie-card card column is-full">
                             <div class="card-content">
                             <div class="media">
                                 <div class="media-left">
@@ -112,24 +128,8 @@
                                 </div>
                             </div>
                             </div>
-                        </div>
-                        <div class="movie-card card column is-full">
-                            <div class="card-content">
-                            <div class="media">
-                                <div class="media-left">
-                                <figure class="image poster">
-                                    <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_Ratio0.7273_AL_.jpg" alt="Placeholder image">
-                                </figure>
-                                </div>
-                                <div class="vertical-center media-content has-text-centered">
-                                    <p class="title is-10 has-text-weight-bold">Inception</p>
-                                    <p class="subtitle is-6">(2010)</p>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
                     </div>
-
+                </div>
             </div>
         <div id="trash" class="column is-centered">
             Drag movie here to delete

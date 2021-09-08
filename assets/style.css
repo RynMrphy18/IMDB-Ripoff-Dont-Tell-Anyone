@@ -28,8 +28,13 @@ h1 {
 .search-column {
   margin: 0 10px 0 40px;
 }
-.searched-movies div {
-  margin-left: 20px;
-  width: auto;
-  margin-right: 20px;
+.searched-movies {
+  margin: 0;
+}
+.label {
+  color: white;
+  font-size: 100%;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
