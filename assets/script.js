@@ -56,9 +56,7 @@ var loadMovies = function() {
     }
 }
 
-<<<<<<< Updated upstream
-=======
-        //draggable feature
+//draggable feature
 
     $(document).ready(function(){
     $("#to-watch").draggable();
@@ -89,12 +87,18 @@ var loadMovies = function() {
     $("#to-watch").droppable({
         accept: ".movie-card",
         drop: function(event, ui) {
+        $(this).append(".movie-card")
+        accept: ".movie-card",
+        drop: function(event, ui) {
         var droppedItem = $(ui.draggable).clone();
         $(this).append(droppedItem);
         }
     });
 
     $("#watched").droppable({
+        accept:".movie-card" ,
+        drop: function(event, ui) {
+        $(this).append(".movie-card")
         accept:".movie-card" ,
         drop: function(event, ui) {
         var droppedItem = $(ui.draggable).clone();
@@ -104,7 +108,6 @@ var loadMovies = function() {
 });
 
     
->>>>>>> Stashed changes
 $("#trash").droppable({
     accept: "  ",
     tolerance: "touch",
