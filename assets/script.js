@@ -82,7 +82,7 @@ var loadMovies = function() {
             $("#to-watch").droppable({
                 accept: ".movie-card",
                 drop: function(event, ui){
-                var droppedItem= $(ui.draggable).clone();
+                var droppedItem= $(ui.draggable);
                 $(this).append(droppedItem)
                 }
             });
@@ -90,23 +90,27 @@ var loadMovies = function() {
             $("#watched").droppable({
                 accept: ".movie-card",
                 drop: function(event, ui){
-                var droppedItem= $(ui.draggable).clone();
+                var droppedItem= $(ui.draggable);
                 $(this).append(droppedItem)
                 }
+
+                
+            });
+
+            $("#trash").droppable({
+                accept: ".movie-card",
+                tolerance: "touch",
+                drop: function(event, ui) {
+                ui.draggable.remove();
+                },
+                // over: function(event, ui) {
+            
+                // },
+                // out: function(event, ui) {
+            
+                // }
             });
         });
 
     
-$("#trash").droppable({
-    accept: "#.movie-card",
-    tolerance: "touch",
-    drop: function(event, ui) {
-    ui.draggable.remove();
-    },
-    over: function(event, ui) {
 
-    },
-    out: function(event, ui) {
-
-    }
-});
