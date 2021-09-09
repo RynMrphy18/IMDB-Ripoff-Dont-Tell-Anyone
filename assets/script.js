@@ -1,11 +1,10 @@
 var apiKey = "k_09b1k3at";
 var keywordFormEl=document.querySelector("#keyword-search-form");
 var keywordInputEl=document.querySelector("#movie");
-var ratingControlEl=document.querySelector("#rating");
-var genreSelectionEl=document.querySelector("#genre");
 var searchButtonEl=document.querySelector("#keyword-search");
 var movieFieldEl=document.querySelector("#movie-field");
-var movieSearchForm = document.querySelector("#movie-search")
+var movieSearchForm = document.querySelector("#movie-search");
+var movieSearchList = document.querySelector("#search-list");
 
 // fetch request from imdb api
 
@@ -16,22 +15,36 @@ var fetchSuggestedMovie = function(movie){
   fetch(apiURL)
   .then(function(response) {
     response.json().then(function(data) {
-      // displayMovie(data, movie);
-      console.log(data, movie);
+        for (i = 0; i < (data.results).length; i++) {
+            displayMovie(data.results[i].title, data.results[i].image, data.results[i].description);
+        }
     });
   });
 };
 
+var displayMovie = function(title, image, date) {
+    var containerDiv = document.createElement("div");
+    containerDiv.setAttribute("class", "movie-card card column is-full")
 
+    containerDiv.innerHTML = '<div class="card-content"><div class="media"><div class="media-left"><figure class="image poster"><img src="' + image + '" alt="Movie poster"></figure></div><div class="vertical-center media-content has-text-centered"><p class="title is-10 has-text-weight-bold">' + title + '</p><p class="subtitle is-6">' + date + '</p></div></div></div>'
+    movieSearchList.appendChild(containerDiv);
+};
 
-fetchSuggestedMovie("inception");
+movieSearchForm.addEventListener("submit", function(event) {
+    var formInput = document.querySelector("#keyword-search-form");
+    var searchKeyword = formInput.textContent;
+
+    fetchSuggestedMovie(searchKeyword);
+    event.preventDefault();
+    return false;
+});
 
 var savedMovies = {};
 
 var saveMovies = function() {
     var savedMoviesString = JSON.stringify(savedMovies);
     localStorage.setItem("movies", savedMoviesString);
-}
+};
 
 var loadMovies = function() {
     var retrievedMovies = JSON.parse(localStorage.getItem("movies"));
