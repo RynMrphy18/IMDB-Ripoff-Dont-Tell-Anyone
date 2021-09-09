@@ -86,22 +86,17 @@ var loadMovies = function() {
 
     $("#to-watch").droppable({
         accept: ".movie-card",
-        drop: function(event, ui) {
-        $(this).append(".movie-card")
-        accept: ".movie-card",
-        drop: function(event, ui) {
-        var droppedItem = $(ui.draggable).clone();
-        $(this).append(droppedItem);
+        drop: function(event, ui){
+        var droppedItem= $(ui.draggable).clone();
+        $(this).append(droppedItem)
+        }
         }
     });
 
     $("#watched").droppable({
-        accept:".movie-card" ,
-        drop: function(event, ui) {
-        $(this).append(".movie-card")
-        accept:".movie-card" ,
-        drop: function(event, ui) {
-        var droppedItem = $(ui.draggable).clone();
+        accept: ".movie-card",
+        drop: function(event, ui){
+        var droppedItem= $(ui.draggable).clone();
         $(this).append(droppedItem)
         }
     });
