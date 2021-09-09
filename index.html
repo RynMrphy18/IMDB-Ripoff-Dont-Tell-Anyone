@@ -25,7 +25,7 @@
     <main>
         <div class="columns">
             <div class="movie-lists column is-half columns">
-                <div id="to-watch" class="marg-side-10 column is-half panel is-primary">
+                <div id="to-watch" class="marg-side-10 column is-half panel is-primary list">
                     <div class="panel-heading">
                         <h2>Movies to watch</h2>
                     </div>
@@ -61,7 +61,7 @@
                     </div>
                 </div>
 
-                <div id="watched" class="marg-side-10 column is-half panel is-primary">
+                <div id="watched" class="marg-side-10 column is-half panel is-primary list">
                     <div class="panel-heading">
                         <h2>Movies watched</h2>
                     </div>
@@ -98,7 +98,7 @@
                             </form>
                     </div>
                 </div>
-                <div class="columns is-multiline searched-movies">
+                <div class="columns is-multiline searched-movies list">
                     <div class="movie-card card column is-full">
                         <div class="card-content">
                             <div class="media">
@@ -143,38 +143,5 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <script>
-        //draggable feature
-                $( function() {
-            $( ".movie-card" ).draggable();
-        } );
-
-        $(document).ready(function(){
-        $("#moviestowatch").draggable({connectwith:"}):
-         $("#movieswatched").draggable();
-                
-         $(".movie-card").draggable ({
-        connectWith: $(".movie-card"),
-        scroll: false,
-        tolerance: "pointer",
-        helper: "clone",
-        activate: function(event) {
-            console.log("activate", this);
-        },
-        deactivate: function(event) {
-            console.log("deactivate", this);
-        },
-        over: function(event) {
-            console.log("over", event.target);
-        },
-        out: function(event) {
-            console.log("out", event.target);
-        },
-        update: function(event) {
-            console.log("update", this);
-        }
-        });
-
-    </script>
 </body>
 </html>

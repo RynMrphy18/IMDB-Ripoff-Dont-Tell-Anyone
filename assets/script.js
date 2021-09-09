@@ -51,16 +51,46 @@ var loadMovies = function() {
     }
 }
 
+        //draggable feature
+
+    $(document).ready(function(){
+    $("#to-watch").draggable();
+    $("#watched").draggable();
+                
+    $(".movie-card").draggable ({
+    connectWith: $(".movie-card .list"),
+    scroll: false,
+    tolerance: "pointer",
+    helper: "clone",
+    activate: function(event) {
+        console.log("activate", this);
+    },
+    deactivate: function(event) {
+        console.log("deactivate", this);
+    },
+    over: function(event) {
+        console.log("over", event.target);
+    },
+    out: function(event) {
+        console.log("out", event.target);
+    },
+    update: function(event) {
+        console.log("update", this);
+    }
+    });
+});
+
+    
 $("#trash").droppable({
-    accept: "  ",
+    accept: "#.movie-card",
     tolerance: "touch",
     drop: function(event, ui) {
     ui.draggable.remove();
     },
-    // over: function(event, ui) {
+    over: function(event, ui) {
 
-    // },
-    // out: function(event, ui) {
+    },
+    out: function(event, ui) {
 
-    // }
+    }
 });
