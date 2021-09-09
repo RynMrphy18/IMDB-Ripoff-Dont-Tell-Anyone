@@ -56,7 +56,7 @@ var loadMovies = function() {
     $(document).ready(function(){
     $("#to-watch").draggable();
     $("#watched").draggable();
-                
+    
     $(".movie-card").draggable ({
     connectWith: $(".movie-card .list"),
     scroll: false,
@@ -77,6 +77,18 @@ var loadMovies = function() {
     update: function(event) {
         console.log("update", this);
     }
+    });
+
+    $("#to-watch").droppable({
+        drop: function(event, ui) {
+        $(this).append(".movie-card")
+        }
+    });
+
+    $("#watched").droppable({
+        drop: function(event, ui) {
+        $(this).append(".movie-card")
+        }
     });
 });
 
