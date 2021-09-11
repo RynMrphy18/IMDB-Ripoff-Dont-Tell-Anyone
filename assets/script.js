@@ -76,9 +76,6 @@ var loadMovies = function () {
 //draggable feature
 
 $(document).ready(function () {
-  $("#to-watch").draggable();
-  $("#watched").draggable();
-
   $(".movie-card").draggable({
     connectWith: $(".movie-card .list"),
     scroll: false,
