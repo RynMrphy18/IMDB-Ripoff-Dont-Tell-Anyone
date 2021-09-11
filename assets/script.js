@@ -1,7 +1,6 @@
 const apiKey = "k_an97lnp8";
 const apiURL = "https://imdb-api.com/en/API/SearchMovie/";
 var keywordFormEl = document.querySelector("#keyword-search-form");
-var _keywordInputEl = document.querySelector("#movie");
 var ratingControlEl = document.querySelector("#rating");
 var genreSelectionEl = document.querySelector("#genre");
 var searchButtonEl = document.querySelector("#keyword-search");
@@ -13,16 +12,20 @@ var movieSearchList = document.querySelector("#search-list");
 // fetch request from imdb api
 
 var fetchSuggestedMovie = function (movie) {
+  var searchKeyword = keywordFormEl.value;
   const apiKey = "k_an97lnp8"
-  const apiURL = "https://imdb-api.com/en/API/SearchMovie/" + apiKey + "/" + _keywordInputEl
+  const apiURL = "https://imdb-api.com/en/API/SearchMovie/" + apiKey + "/" + searchKeyword
+  console.log(searchKeyword);
   fetch(apiURL)
     .then(function (response) {
       return response.json()
         .then(function (data,) {
+          movieSearchList.innerHTML = "";
+
           for (i = 0; i < (data.results).length; i++) {
+            console.log(data.results);
             displaySuggestedMovie(data.results[i].title, data.results[i].image, data.results[i].description);
           }
-
         });
     });
 };
