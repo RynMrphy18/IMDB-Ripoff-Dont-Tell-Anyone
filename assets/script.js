@@ -7,6 +7,8 @@ var searchButtonEl = document.querySelector("#keyword-search");
 var movieFieldEl = document.querySelector("#movie-field");
 var movieSearchForm = document.querySelector("#movie-search");
 var movieSearchList = document.querySelector("#search-list");
+var moviesToWatchSaved  = [];
+var moviesWatchedSaved = [];
 
 
 // fetch request from imdb api
@@ -47,12 +49,12 @@ movieSearchForm.addEventListener("submit", function (event) {
   return false;
 });
 
-
-var savedMovies = {};
-
 var saveMovies = function () {
-  var savedMoviesString = JSON.stringify(savedMovies);
-  localStorage.setItem("movies", savedMoviesString);
+  var savedMoviesString = JSON.stringify(moviesToWatchSaved);
+  localStorage.setItem("moviesToWatch", savedMoviesString);
+
+  savedMoviesString = JSON.stringify(moviesWatchedSaved);
+  localStorage.setItem("moviesWatched", savedMoviesString);
 };
 
 var loadMovies = function () {
@@ -102,7 +104,48 @@ $(document).ready(function () {
     accept: ".movie-card",
     drop: function (event, ui) {
       var droppedItem = $(ui.draggable);
-      $(this).append(droppedItem)
+      $(this).append(droppedItem);
+
+      moviesToWatchSaved = [];
+      $(this).children().each(function() {
+        if ($(this).hasClass("movie-card")) {
+          var movieTitle = ($(this).find(".title").text());
+          var movieImage = ($(this).find("img").attr("src"));
+          var movieDate = ($(this).find(".subtitle").text());
+
+          var movieObj = {
+            "title": movieTitle,
+            "image": movieImage,
+            "date": movieDate
+          }
+
+          moviesToWatchSaved.push(movieObj);
+        }
+      });
+
+      moviesWatchedSaved = [];
+      $("#watched").children().each(function() {
+        if ($(this).hasClass("movie-card")) {
+          var movieTitle = ($(this).find(".title").text());
+          var movieImage = ($(this).find("img").attr("src"));
+          var movieDate = ($(this).find(".subtitle").text());
+
+          var movieObj = {
+            "title": movieTitle,
+            "image": movieImage,
+            "date": movieDate
+          }
+
+          moviesWatchedSaved.push(movieObj);
+        }
+        else {
+          moviesWatchedSaved = [];
+        }
+      })
+
+      console.log(moviesWatchedSaved);
+      console.log(moviesToWatchSaved);
+      saveMovies();
     }
   });
 
@@ -110,10 +153,48 @@ $(document).ready(function () {
     accept: ".movie-card",
     drop: function (event, ui) {
       var droppedItem = $(ui.draggable);
-      $(this).append(droppedItem)
+      $(this).append(droppedItem);
+
+      moviesWatchedSaved = [];
+      $(this).children().each(function() {
+        if ($(this).hasClass("movie-card")) {
+          var movieTitle = ($(this).find(".title").text());
+          var movieImage = ($(this).find("img").attr("src"));
+          var movieDate = ($(this).find(".subtitle").text());
+
+          var movieObj = {
+            "title": movieTitle,
+            "image": movieImage,
+            "date": movieDate
+          }
+
+          moviesWatchedSaved.push(movieObj);
+        }
+      });
+      
+      moviesToWatchSaved = [];
+      $("#to-watch").children().each(function() {
+        if ($(this).hasClass("movie-card")) {
+          var movieTitle = ($(this).find(".title").text());
+          var movieImage = ($(this).find("img").attr("src"));
+          var movieDate = ($(this).find(".subtitle").text());
+
+          var movieObj = {
+            "title": movieTitle,
+            "image": movieImage,
+            "date": movieDate
+          }
+
+          moviesToWatchSaved.push(movieObj);
+        }
+        else {
+          moviesToWatchSaved = [];
+        }
+      })
+      console.log(moviesWatchedSaved);
+      console.log(moviesToWatchSaved);
+      saveMovies();
     }
-
-
   });
 
   $("#trash").droppable({
