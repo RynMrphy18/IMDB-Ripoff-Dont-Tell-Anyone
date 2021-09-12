@@ -32,12 +32,16 @@ var fetchSuggestedMovie = function (movie) {
     });
 };
 
-var displaySuggestedMovie = function (title, image, date) {
+var createMovieCard = function (title, image, date) {
   var containerDiv = document.createElement("div");
   containerDiv.setAttribute("class", "movie-card card column is-full")
 
   containerDiv.innerHTML = '<div class="card-content"><div class="media"><div class="media-left"><figure class="image poster"><img src="' + image + '" alt="Movie poster"></figure></div><div class="vertical-center media-content has-text-centered"><p class="title is-10 has-text-weight-bold">' + title + '</p><p class="subtitle is-6">' + date + '</p></div></div></div>'
-  movieSearchList.appendChild(containerDiv);
+  return containerDiv;
+}
+
+var displaySuggestedMovie = function (title, image, date) {
+  movieSearchList.appendChild(createMovieCard(title, image, date));
 };
 
 movieSearchForm.addEventListener("submit", function (event) {
@@ -58,23 +62,29 @@ var saveMovies = function () {
 };
 
 var loadMovies = function () {
-  var retrievedMovies = JSON.parse(localStorage.getItem("movies"));
+  var retrievedToWatch = JSON.parse(localStorage.getItem("moviesToWatch"));
+  var retrievedWatched = JSON.parse(localStorage.getItem("moviesWatched"));
 
-  if (!retrievedMovies) {
-    savedMovies = {};
+  var toWatchContainer = document.querySelector("#to-watch");
+  var watchedContainer = document.querySelector("#watched");
+
+  if (retrievedToWatch) {
+    for (i = 0; i < retrievedToWatch.length; i++) {
+      console.log(retrievedToWatch[i]);
+      var movieCard = createMovieCard(retrievedToWatch[i].title, retrievedToWatch[i].image, retrievedToWatch[i].date);
+      toWatchContainer.appendChild(movieCard);
+    }
   }
-  else {
-    retrievedMovies.array.forEach(function (element) {
-      if (savedMovies.status === toWatch) {
-        displayMovies(element);
-      }
-      else if (savedMovies.status === watched) {
-        displayMovies(element);
-      }
-    });
+  if (retrievedWatched) {
+    for (i = 0; i < retrievedWatched.length; i++) {
+      console.log(retrievedWatched[i]);
+      var movieCard = createMovieCard(retrievedWatched[i].title, retrievedWatched[i].image, retrievedWatched[i].date);
+      watchedContainer.appendChild(movieCard);
+    }
   }
 }
 
+loadMovies();
 //draggable feature
 
 $(document).ready(function () {
