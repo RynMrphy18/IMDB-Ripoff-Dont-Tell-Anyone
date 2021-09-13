@@ -1,5 +1,7 @@
 const apiKey = "k_an97lnp8";
+const apiKey2 = "5c6393d1-9035-4b6d-8e4b-5c4e71a22e9e";
 const apiURL = "https://imdb-api.com/en/API/SearchMovie/";
+
 var keywordFormEl = document.querySelector("#keyword-search-form");
 var ratingControlEl = document.querySelector("#rating");
 var genreSelectionEl = document.querySelector("#genre");
@@ -7,6 +9,7 @@ var searchButtonEl = document.querySelector("#keyword-search");
 var movieFieldEl = document.querySelector("#movie-field");
 var movieSearchForm = document.querySelector("#movie-search");
 var movieSearchList = document.querySelector("#search-list");
+var randomQuote = document.querySelector("#popular-movie-quotes")
 
 
 // fetch request from imdb api
@@ -130,3 +133,27 @@ $(document).ready(function () {
     // }
   });
 });
+
+const apiURL2 = "https://movie-quote-api.herokuapp.com/v1/quote/"
+var generateQuoteString = JSON.stringify(generateQuote);
+function generateQuote() {
+  fetch(apiURL2)
+    .then(function (response) {
+      return response.json()
+        .then(function (data) {
+          document.getElementById("popular-movie-quotes").innerHTML = data + '<div class="navbar-end"><p class="navbar-item" id="popular-movie-quotes"></p></div>'
+        })
+    })
+};
+
+
+
+setInterval(generateQuote(), 10000);
+
+
+
+
+
+
+
+
