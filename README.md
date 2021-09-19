@@ -25,7 +25,7 @@ Arthur Tilley
 Technologies Utilized: Plain ol' Javascript, some JQuery, and a couple of API fetches thrown in the mix
 
 Contact:
-Arthur Tilley - tilleyarthur@gmail.com
+Ryan Murphy: rmurph1800@gmail.com
 
 
 
