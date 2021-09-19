@@ -27,5 +27,5 @@ Technologies Utilized: Plain ol' Javascript, some JQuery, and a couple of API fe
 Contact:
 Ryan Murphy: rmurph1800@gmail.com
 
-
+(The Api key may be iffy with the draggability at the moment)
 
